@@ -1,0 +1,21 @@
+{% extends 'music_nation/base.html' %}
+
+{% block title %}SignUp{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<h3><strong>Bạn sẽ phải thoát ra và đăng nhập lại</strong></h3>
+<small>Bạn có muốn <a href="{% url 'music_nation:logout' %}"><strong>Đăng kí</strong></a></small>
+
+{% else %}
+      {% if message %}
+              <li style="list-style-type:none;"><h3><strong>{{ message }}</strong></h3></li>
+      {% endif %}
+  <h2>Đăng kí</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary" style="background-color:green">Đăng kí</button>
+  </form>
+{% endif %}
+{% endblock %}

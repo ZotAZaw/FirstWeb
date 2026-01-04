@@ -1,0 +1,16 @@
+{% extends 'music_nation/base.html' %}
+
+{%block title%}
+{%endblock%}
+{%block content%}
+
+  <div class="container">
+    <h2 style="margin:30px;">Tạo album mới tại đây.</h2>
+    <form method="POST" enctype="multipart/form-data">{# this field is important for file upload #}
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit" class="save btn btn-success">Lưu</button>
+    </form>
+  </div>
+
+{%endblock%}
