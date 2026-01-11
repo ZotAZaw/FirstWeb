@@ -1,4 +1,4 @@
-# Website nghe nhạc trực tuyến được xây dựng bằng **Django**
+# Website nghe nhạc trực tuyến xây dựng bằng **Django**
 
 ## Giới thiệu
 
