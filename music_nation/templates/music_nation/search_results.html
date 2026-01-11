@@ -1,0 +1,21 @@
+{% extends "music_nation/homepage.html" %}
+<!-- or base.html if you created one -->
+
+{% block content %}
+<h2>Search results for "{{ query }}"</h2>
+
+{% if results %}
+    <ul>
+        {% for song in results %}
+            <li>
+                {{song.song_name}}<br/>
+                <audio controls>
+                <source src="{{ song.song_file.url }}" type="audio/mp3">
+                </audio>
+            </li><hr/>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No songs found.</p>
+{% endif %}
+{% endblock %}

@@ -18,6 +18,19 @@ def home(request):
     albums = Album.objects.all()
     return render(request, 'music_nation/homepage.html',{'albums':albums})
 
+def search_songs(request):
+    query = request.GET.get("q")
+    results = []
+
+    if query:
+        results = Song.objects.filter(song_name__icontains=query)
+
+    return render(request, "music_nation/search_results.html", {
+    "results": results,
+    "query": query,
+})
+
+
 def profile_detail(request, username):
     albums = get_object_or_404(User, username=username)
     albums = albums.albums.all()
@@ -68,7 +81,7 @@ def signup(request):
     else:
         form = SignUpForm()
         return render(request, 'music_nation/user_signup.html', {'form':form})
-
+    
 @login_required
 def delete_album(request, username, album):
     user = get_object_or_404(User, username=username)
@@ -109,3 +122,4 @@ def add_song(request, username, album):
             return render(request, 'music_nation/create_new_song.html', {'form':form})
     else:
         return redirect('music_nation:album_detail', username=username, album=album)
+
