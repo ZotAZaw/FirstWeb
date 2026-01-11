@@ -60,6 +60,7 @@ venv\Scripts\activate
 ```bash 
 python manage.py runserver
 ```
+Mở trình duyệt: http://127.0.0.1:8000/
 
 ## Chức năng chính:
 
