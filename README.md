@@ -61,39 +61,43 @@ python manage.py runserver
 ```
 Mở trình duyệt: http://127.0.0.1:8000/
 
+---
+
 ## Chức năng chính:
 
-- **Authentication**
+**Authentication**
   
-Đăng ký tài khoản
+- Đăng ký tài khoản
 
-Đăng nhập
+- Đăng nhập
 
-Đăng xuất
+- Đăng xuất
 
-Quên mật khẩu (Password Reset qua email – cần cấu hình email backend)
+- Quên mật khẩu (Password Reset qua email – cần cấu hình email backend)
 
-- **Music**
+**Music**
   
-Tạo album
+- Tạo album
 
-Thêm bài hát vào album
+- Thêm bài hát vào album
 
-Hiển thị danh sách bài hát
+- Hiển thị danh sách bài hát
 
-Nghe nhạc
+- Nghe nhạc
 
-- **Tìm kiếm**
+**Tìm kiếm**
   
-Tìm kiếm bài hát theo tên
+- Tìm kiếm bài hát theo tên
 
-Thanh tìm kiếm nằm giữa thanh navigation
+- Thanh tìm kiếm nằm giữa thanh navigation
 
-- **Profile**
+**Profile**
   
-Trang cá nhân người dùng
+- Trang cá nhân người dùng
 
-Quản lý album của người dùng
+- Quản lý album của người dùng
+
+---
 
 ## Tài khoản Admin:
 
