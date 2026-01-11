@@ -29,8 +29,7 @@ Chức năng chính:
 
 - Python >= 3.9
 - pip
-- Virtualenv (khuyến nghị)
-- Git
+- Git (optional)
 
 ---
 
@@ -64,22 +63,37 @@ Mở trình duyệt: http://127.0.0.1:8000/
 
 ## Chức năng chính:
 
-- **Authentication** 
--Đăng ký tài khoản
--Đăng nhập
--Đăng xuất
--Quên mật khẩu (Password Reset qua email – cần cấu hình email backend)
-- **Music** 
--Tạo album
--Thêm bài hát vào album
--Hiển thị danh sách bài hát
--Nghe nhạc
-- **Tìm kiếm** 
--Tìm kiếm bài hát theo tên
--Thanh tìm kiếm nằm giữa thanh navigation
-- **Profile** 
--Trang cá nhân người dùng
--Quản lý album của người dùng
+- **Authentication**
+  
+Đăng ký tài khoản
+
+Đăng nhập
+
+Đăng xuất
+
+Quên mật khẩu (Password Reset qua email – cần cấu hình email backend)
+
+- **Music**
+  
+Tạo album
+
+Thêm bài hát vào album
+
+Hiển thị danh sách bài hát
+
+Nghe nhạc
+
+- **Tìm kiếm**
+  
+Tìm kiếm bài hát theo tên
+
+Thanh tìm kiếm nằm giữa thanh navigation
+
+- **Profile**
+  
+Trang cá nhân người dùng
+
+Quản lý album của người dùng
 
 ## Tài khoản Admin:
 
