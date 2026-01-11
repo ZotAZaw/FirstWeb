@@ -12,7 +12,7 @@
 
 
     {% for song in songs %}
-      <li >
+      <li>
         {{song.song_name}}<br/>
         <audio controls>
           <source src="{{ song.song_file.url }}" type="audio/mp3">

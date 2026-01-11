@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'music_nation/css/music_nation.css' %}">
   </head>
   <body style="background-color:rgb(184, 255, 184)">
-    <div >
+    <div>
       <header>
         <nav>
           <ul class="bglight" style="background-color:rgb(20, 1, 56)">
@@ -18,12 +18,28 @@
               </a>
             </li>
              <li class="li-left" style="color:white">
-              <h2 class="base-a"><a href="{% url 'music_nation:home' %}">Trình nghe nhạc Số 1 Việt Nam</a></h2>
+              <h2 class="base-a"><a href="{% url 'music_nation:home' %}">Trình nghe nhạc Số 1,5 Việt Nam</a></h2>
+            </li>
+            <li class="li-middle nav-center">
+              <form action="{% url 'music_nation:search_songs' %}" method="get">
+                <input
+                  type="text"
+                  name="q"
+                  placeholder="Tìm kiếm..."
+                  class="search-input"
+                  required
+                />
+              </form>
             </li>
             {% if user.is_authenticated %}
 
             <li class="li-right">
-              <a class="base-a" href="{% url 'music_nation:logout' %}"><h2>Đăng xuất</h2></a>
+              <form action="{% url 'music_nation:logout' %}" method="post" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="base-a" style="background:none;border:none;cursor:pointer;">
+                  <h2>Đăng xuất</h2>
+                </button>
+              </form>
             </li>
             <li class="li-right">
               <a class="base-a" href="{% url 'music_nation:add_album' user %}"><h2>Tạo album</h2></a>
